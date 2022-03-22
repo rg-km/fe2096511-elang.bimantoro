@@ -1,0 +1,162 @@
+* {
+  text-decoration: none;
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+  padding: 100px;
+  padding-top: 30px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+  width: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 80px;
+  position: -webkit-sticky;
+  position: sticky;
+  background: white;
+  z-index: 1;
+  top: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 0px 16px 0px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav .logo {
+  font-size: 50px;
+  font-weight: 800;
+  float: left;
+  font-family: courier;
+  color: #292929;
+}
+
+.menu {
+  float: right;
+}
+
+.wrapper {
+  width: 1300px;
+  margin: auto;
+  position: relative;
+}
+
+.wrapper .kolom {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.wrapper .jumbotron {
+  max-width: 80%;
+}
+
+img {
+  max-width: 20%;
+}
+
+section {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-family: 'comic sans ms';
+  text-align: center;
+  font-weight: 800;
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: #364f6b;
+  width: 100%;
+  line-height: 50px;
+}
+
+h3 {
+  font-family: 'comic sans ms';
+  font-weight: 800;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #364f6b;
+  width: 100%;
+  line-height: 50px;
+}
+
+a.tbl-biru {
+  background: #742de6;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  margin-top: 20px;
+  padding: 15px 20px 15px 20px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+button {
+  background: #711A75;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  margin-top: 20px;
+  padding: 15px 20px 15px 20px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+p {
+  margin: 10px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
+}
+
+footer {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  color: #364f6b;
+}
+
+footer .footer-section {
+  width: 20%;
+  margin: auto;
+  color: #364f6b;
+}
+/*# sourceMappingURL=style.css.map */
