@@ -15,3 +15,22 @@
 const counter = parseInt(prompt("Masukan jumlah bilangan yang ingin dicek: "));
 
 // TODO: answer here
+const prompt = require("prompt-sync")();
+const input = parseInt(prompt("Masukan jumlah bilangan yang ingin dicek: "));
+
+function kelipatan(input){
+    let hasil = '';
+    for(let i=1; i<=input; i++){
+        if(i % 3 == 0 && i % 5 == 0){
+        hasil = input + ' merupakan kelipatan 3 dan 5';
+      } else if(i % 3 == 0) {
+        hasil = input + ' merupakan kelipatan 3';
+      } else if(i % 5 == 0) {
+        hasil = input + ' merupakan kelipatan 5';
+      } else {
+        hasil = input + ' bukan merupakan kelipatan 3 dan 5';
+        }
+    }
+    return hasil;
+}
+console.log(kelipatan(input));
