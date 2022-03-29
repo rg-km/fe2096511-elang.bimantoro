@@ -42,5 +42,3 @@ console.log(ruangCafe('Fauzan', 30, 999999))
 console.log(ruangCafe('Tegar', 27, 5000))
 
 module.exports = ruangCafe
-
-//done
