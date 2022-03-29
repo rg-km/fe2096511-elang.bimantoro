@@ -18,13 +18,30 @@ terjemahKataSandi = "PASUKAN 1, MAJU KE AREA 2, JAM 3 SORE"
 Lengkapilah function dengan input kata sandi dan output terjemahannya
 */
 
-
 function terjemahKataSandi(kataSandi) {
   // TODO: answer here
+  let kataSandiBaru = kataSandi.replace(/&/g, "");
+  kataSandiBaru = kataSandiBaru.replace(/%/g, "");
+  kataSandiBaru = kataSandiBaru.replace(/\^/g, "");
+  kataSandiBaru = kataSandiBaru.replace(/\s/g, "E");
+  kataSandiBaru = kataSandiBaru.replace(/#/g, " ");
+  kataSandiBaru = kataSandiBaru.replace(/]/g, ",");
+  kataSandiBaru = kataSandiBaru.replace(/\+/g, "A");
+
+  return kataSandiBaru;
 }
 
+// const word = 'PASUKAN 1, MAJU KE AREA 2, JAM 3 SORE';
+// const regex = /\s/g;
+// const result = word.replace(regex, 'E');
 
-console.log(terjemahKataSandi("&P%&+^S&^U&K+%N#1]#M&^+J^%%U#K #+^R&& +#2]#J+M#3#S^%%O&^R #"));
+// console.log(result);
+
+console.log(
+  terjemahKataSandi(
+    "&P%&+^S&^U&K+%N#1]#M&^+J^%%U#K #+^R&& +#2]#J+M#3#S^%%O&^R #"
+  )
+);
 // PASUKAN 1, MAJU KE AREA 2, JAM 3 SORE
 
-module.exports = terjemahKataSandi
+module.exports = terjemahKataSandi;
