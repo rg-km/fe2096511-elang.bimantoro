@@ -8,16 +8,16 @@
 
  function angkaPalindrome(num) {
   // TODO: answer here
-  let hasil = '';
-  for (let i = num; i <num+100; i++) {
-    let angka = i.toString();
-    let angkaBaru = angka.split('').reverse().join('');
-    if (angka === angkaBaru) {
-      hasil = angka;
-      break;
-    }
+  let leftSide = 1;
+  let rightSide = 2;
+  
+  while (leftSide !== rightSide) {
+    num++
+    let string = num.toString();
+    leftSide = string.slice(0, Math.ceil(string.length/2));
+    rightSide = string.slice(Math.floor(string.length/2), string.length).split('').reverse().join('');
   }
-  return hasil;
+  return num;
 }
 
 console.log(angkaPalindrome(10)); //11
