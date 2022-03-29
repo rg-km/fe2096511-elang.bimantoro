@@ -49,3 +49,5 @@
  console.log('Ninth Word: ' + ninthWord + ', with length: ' + ninthWordLength);
  console.log('Tenth Word: ' + tenthWord + ', with length: ' + tenthWordLength);
  console.log('Eleventh Word: ' + eleventhWord + ', with length: ' + eleventhWordLength);
+
+ //done
