@@ -14,6 +14,27 @@
 function diagonalDifference(arr) {
   // Write your code here
   // TODO: answer here
+  // index primary: [[0, 0], [1, 1], [2, 2]]
+  // index secondary: [[0, 2], [1, 1], [2, 0]]
+  let primaryIndex = 0;
+  let secondaryIndex = arr.length - 1;
+  let primary = 0;
+  let secondary = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      if ( i === primaryIndex && j === primaryIndex) {
+        primary += arr[i][j];
+        primaryIndex++;
+      }
+      
+      if ( j === secondaryIndex) {
+        secondary += arr[i][j];
+        secondaryIndex--;
+      }
+    }
+  }
+  return Math.abs(primary - secondary);
 }
 
 function main() {

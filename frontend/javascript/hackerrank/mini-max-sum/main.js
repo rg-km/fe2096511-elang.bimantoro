@@ -13,6 +13,15 @@
 function miniMaxSum(arr) {
   // Write your code here
   // TODO: answer here
+  for (let i = 0; i < arr.length; i++) {
+    let temp = 0;
+    for (let j = 0; j < arr.length; j++) {
+      if (i !== j) {
+        temp += arr[j];
+      }
+    }
+    console.log(temp);
+}
 }
 
 function main() {
