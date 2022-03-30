@@ -13,6 +13,21 @@
 function staircase(n) {
   // Write your code here
   // TODO: answer here
+  let stair = n;
+  let result = "";
+  for (let i = 0; i < n; i++) {
+    let temp = "";
+    for (let j = 0; j < n; j++) {
+      if (j >= stair){
+        temp += "#";
+      }else {
+        temp += " ";
+      }
+    }
+    stair--;
+    result += temp + "\n";
+  }
+  return result;
 }
 
 function main() {

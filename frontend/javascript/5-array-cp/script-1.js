@@ -16,5 +16,12 @@ let arr = numInput.split(" ").map(Number);
 let maxSum = 0; 
 
 // TODO: answer here
+for (let i = 0; i < arr.length; i++) {
+    if(arr[i] > maxSum) {
+        maxSum = arr[i];
+    } else if (arr[i] < 0) {
+        maxSum = 0;
+    }
+}
 
 console.log(maxSum);
