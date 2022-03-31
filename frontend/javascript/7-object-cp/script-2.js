@@ -4,7 +4,9 @@
 // - substract() mengurangi jumlah nilai yang disimpan.
 // - multiply() mengalikan nilai yang disimpan.
 // - division() membagi nilai yang disimpan.
-
+const prompt = require("prompt-sync")();
+const angka1 = parseInt(prompt("Masukkan bialngan pertama: "));
+const angka2 = parseInt(prompt("Masukkan bialngan kedua: "));
 
 let calculator = {
   // Tulis kode di sini
@@ -13,25 +15,25 @@ let calculator = {
   // Penjumlahan
   sum(angka1, angka2) {
     let hasil = angka1 + angka2;
-    return `${hasil}`;
+    return 'Hasil penjumlahan ' + angka1 + ' + ' + angka2 + ' = ' + hasil;
   },
   
   // Pengurangan
   substract(angka1, angka2) {
     let hasil = angka1 - angka2;
-    return `${hasil}`;
+    return 'Hasil pengurangan ' + angka1 + ' - ' + angka2 + ' = ' + hasil;
   },
   
   // Perkalian
   multiply(angka1, angka2) {
     let hasil = angka1 * angka2;
-    return `${hasil}`;
+    return 'Hasil perkalian ' + angka1 + ' * ' + angka2 + ' = ' + hasil;
   },
   
   // Pembagian
   division(angka1, angka2) {
     let hasil = angka1 / angka2;
-    return `${hasil}`;
+    return 'Hasil pembagian ' + angka1 + ' / ' + angka2 + ' = ' + hasil;
   }
 };
   
