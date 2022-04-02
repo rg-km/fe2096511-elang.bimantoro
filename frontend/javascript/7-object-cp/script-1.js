@@ -19,9 +19,9 @@ delete programming.jokes;
 // 4. Tulis perintah untuk menambahkan key baru yang disebut isFun dan nilai true ke objek programming.
 programming.isFun = true;
 // 5. Menggunakan loop, iterasi array languages dan console.log semua bahasa.
-programming.languages.forEach(function(lang) {
-    console.log(lang);
-});
+for (let i = 0; i < programming.languages.length; i++) {
+    console.log(programming.languages[i]);
+}
 // 6. Menggunakan loop, console.log semua key dalam objek pemrograman.
 for (let key in programming) {
     console.log(key);
