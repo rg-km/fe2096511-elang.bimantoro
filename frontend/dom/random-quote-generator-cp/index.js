@@ -3,10 +3,15 @@ Uncomment variable dibawah ini untuk mulai mengerjakan. dilarang mengganti nama 
 */
 
 // let quote = element untuk menampilkan quote
+let quote = document.getElementById('quote');
 // let author = element untuk menampilkan author
+let author = document.getElementById('author');
 // let citation = element untuk menampilkan citation
+let citation = document.getElementById('citation');
 // let year = element untuk menampilkan year
+let year = document.getElementById('year');
 // let button = tombol untuk melakuan generate random quote
+let button = document.getElementById('button');
 
 var quotes = [
 	{
@@ -172,12 +177,28 @@ var quotes = [
 ];
 
 // TODO: answer here
+const quoteText = document.getElementById("random-quote");
+const quoteAuthor = document.getElementsByClassName("author") [0];
+const quoteCitation = document.getElementsByClassName("citation") [0];
+const quoteYear = document.getElementsByClassName("year") [0];
+const generateButton = document.getElementsByClassName("btn-generate") [0];
+generateButton.addEventListener("click", displayQuote);
 
 function getQuote() {
 	// TODO: answer here
+	let number = Math.floor(Math.random() * quotes.length);
+	return quotes[number];
 }
 
 
 function displayQuote() {
 	// TODO: answer here
+	const quote = getQuote();
+	quoteText.innerHTML = quote.quote;
+	quoteAuthor.innerHTML = quote.author;
+	quoteCitation.innerHTML = quote.citation ? quote.citation : "";
+	quoteYear.innerHTML = quote.year ? quote.year : "";
 }
+
+displayQuote();
+generateButton.addEventListener("click", displayQuote);
