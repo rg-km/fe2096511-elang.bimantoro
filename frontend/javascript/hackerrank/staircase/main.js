@@ -13,21 +13,19 @@
 function staircase(n) {
   // Write your code here
   // TODO: answer here
-  let stair = n;
-  let result = "";
-  for (let i = 0; i < n; i++) {
-    let temp = "";
-    for (let j = 0; j < n; j++) {
-      if (j >= stair){
-        temp += "#";
-      }else {
-        temp += " ";
+  let pattern = "";
+  for (let i = 1; i <= n; i++) {
+      // untuk spasi
+      for (let j = 0; j < n-i; j++) {
+          pattern += " ";
       }
-    }
-    stair--;
-    result += temp + "\n";
+      // untuk pattern #
+      for (let k = 0; k < i; k++) {
+          pattern += "#";
+      }
+      pattern += "\n";
   }
-  return result;
+  return pattern;
 }
 
 function main() {
