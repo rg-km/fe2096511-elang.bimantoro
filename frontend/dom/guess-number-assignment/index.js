@@ -11,56 +11,52 @@ Uncomment variable dibawah ini untuk mulai mengerjakan. dilarang mengganti nama 
 // let score = nilai yang akan ditampilakan
 
 // TODO: answer here
-const randomNumber = Math.ceil(Math.random() * 10);
-const scoretext = document.getElementsByClassName('score')[0];
-const checkBtn = document.getElementsByClassName('check')[0];
-const newGameBtn = document.getElementsByClassName('new-game')[0];
-const input = document.getElementsByClassName('input') [0];
-const message = document.getElementsByClassName('message')[0];
-const numberText = document.getElementsByClassName('number')[0];
-let score = 10;
-
-newGameBtn.addEventListener("click", resetGame);
-checkBtn.addEventListener("click", checkNumber);
+let randomNumber = Math.floor(Math.random() * 10) + 1;
+let input = document.querySelector('.input');
+let message = document.querySelector('.message');
+let score = document.querySelector('.score');
+let number = document.querySelector('.number');
 
 function displayMessage(msg) {
   // TODO: answer here
   message.innerHTML = msg;
 }
+score.innerHTML = 10;
+ 
+document.querySelector('.new-game').addEventListener('click', resetGame);
+document.querySelector('.check').addEventListener('click', checkNumber);
   
 
 function resetGame() {
   // TODO: answer here
   //dilarang menghapus code dibawah ini!
-  document.getElementById('hidden-number').innerHTML = randomNumber;
+  number.innerHTML = "?";
+  randomNumber = Math.floor(Math.random() * 10) + 1;
+  input.value = '';
+  message.innerHTML = 'Lets start guessing...';
+  score.innerHTML = 10;
 }
 
 function checkNumber() {
   // TODO: answer here
- const value = input.value;
- console.log(input.value, randomNumber);
- if (value < 1 || value > 10) {
-  displayMessage('Input angka antara 1-10');
-} else{
-  if (score > 0) {
-    if (value < randomNumber) {
-       displayMessage("Your number is too small");
-       score--;
-       scoretext.innerHTML = score;
-     } else if (value > randomNumber) {
-       displayMessage("Your number is too big");
-       score--;
-       scoretext.innerHTML = score;
-     } else {
-       displayMessage("Your number is correct");
-       numberText.innerHTML = randomNumber;
-     }
-  } else {
-     displayMessage("Game Over");
-     scoretext.innerHTML = "0";
+  if(score.innerHTML>0){
+    if(message.innerHTML != 'Yeay! You guessed the correct number!'){
+      if(input.value ==='' || input.value == 0 || input.value < 0 || input.value > 10) {
+        displayMessage('Guess any number between 1 and 10');
+      } else if(input.value == randomNumber) {
+        displayMessage('Yeay! You guessed the correct number!');
+        number.innerHTML = randomNumber;
+      } else if(input.value > randomNumber) {
+        displayMessage("Oww... that's too big!");
+        score.innerHTML--;
+      } else if(input.value < randomNumber) {
+        displayMessage('Too small, buddy!');
+        score.innerHTML--;
+      }
+    }
+  }if(score.innerHTML == 0) {
+    displayMessage('Game Over!');
   }
-}
-   
 }
 
 //dilarang menghapus code dibawah ini!
