@@ -9,20 +9,18 @@
 // Input: 15
 // Output: "Masukan salah. Input bulan antara 1-12"
 
-  // TODO: answer here
-function angkaPalindrome(num) {
-  let leftSide = 1;
-  let rightSide = 2;
-
-  while (leftSide !== rightSide) {
-    num++
-    let string = num.toString();
-    leftSide = string.slice(0, Math.ceil(string.length / 2));
-    rightSide = string.slice(Math.floor(string.length / 2), string.length).split("").reverse().join("");
+function getMonthName(monthNumber) {
+    monthNumber = monthNumber - 1;
+    let months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli',
+                  'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+    if (months[monthNumber]) {
+      console.log("Bulan ke-" + (monthNumber + 1) + " adalah " + months[monthNumber])
+    } else {
+      throw new Error("Masukan salah. Input bulan antara 1-12");
+    }
   }
-  return num;
-}
-
-console.log(angkaPalindrome(10)); // 11
-console.log(angkaPalindrome(17)); // 22
-console.log(angkaPalindrome(175)); // 181
+  
+  // TODO: answer here
+    let myMonth = parseInt(prompt("Masukan bilangan: "));
+    getMonthName(myMonth);
+  // TODO: answer here
