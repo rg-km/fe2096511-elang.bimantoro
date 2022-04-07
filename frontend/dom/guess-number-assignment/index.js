@@ -16,15 +16,15 @@ let input = document.querySelector('.input');
 let message = document.querySelector('.message');
 let score = document.querySelector('.score');
 let number = document.querySelector('.number');
+score.innerHTML = 10;
+ 
+document.querySelector('.new-game').addEventListener('click', resetGame);
+document.querySelector('.check').addEventListener('click', checkNumber);
 
 function displayMessage(msg) {
   // TODO: answer here
   message.innerHTML = msg;
 }
-score.innerHTML = 10;
- 
-document.querySelector('.new-game').addEventListener('click', resetGame);
-document.querySelector('.check').addEventListener('click', checkNumber);
   
 
 function resetGame() {
