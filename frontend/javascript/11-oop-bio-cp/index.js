@@ -13,6 +13,36 @@ class Person {
   }
   
   // TODO: answer here
+  get getName() {
+    return this.name;
+  }
+  get getAge() {
+    return this.age;
+  }
+  get getJob() {
+    return this.job;
+  }
+  set setName(name) {
+    this.name = name;
+  }
+  set setAge(age) {
+    this.age = age;
+  }
+  set setJob(job) {
+    this.job = job;
+  }
 }
+const person = new Person('elang', 21, 'Programmer');
+console.log(person.getName);
+console.log(person.getAge);
+console.log(person.getJob);
+person.setName = 'bima';
+person.setAge = 22;
+person.setJob = 'Engineer';
+console.log(person.getName);
+console.log(person.getAge);
+console.log(person.getJob);
+
+
 
 module.exports = Person
