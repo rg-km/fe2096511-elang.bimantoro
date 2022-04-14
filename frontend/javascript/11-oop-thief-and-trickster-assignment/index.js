@@ -9,7 +9,7 @@ class Thief extends Player {
   //  - Apabila gold player (sendiri) kurang dari 10 gold, kembalikan message "Aku terlalu miskin"
   robbedBlind() {
     // TODO: answer here
-    this.getStealChance = 0.75;
+    this.setStealChance(0.75);
     if(this.getGold() < 10) {
       return "Aku terlalu miskin";
     } else {

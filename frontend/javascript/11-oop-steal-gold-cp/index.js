@@ -19,7 +19,7 @@ class Player {
 
   getStealChance() {
   // TODO: answer here
-  this.stealChance = this.randomizer();
+  return this.stealChance;
   }
 
   setStealChance(chance) {
@@ -41,15 +41,18 @@ class Player {
   
   steal(player) {
     // TODO: answer here
-    if (this.stealChance > player.randomizer() || player.getGold() < 5) {
-      if (player.getGold() < 5) {
-        return "Lawan terlalu miskin";
-      } else {
-        player.setGold(this.getGold() - 5);
-        this.setGold(this.getGold() + 5);
-        return "Berhasil mencuri 5 gold";
-      }
-    } else {
+    if (this.randomizer() <= this.stealChance) {
+    	this.hasBeenRobbed = true;
+      this.setGold(this.gold + 5);
+      player.setGold(player.gold - 5);
+    	return "Berhasil mencuri 5 gold";
+    }
+    if (player.gold < 5) {
+      this.hasBeenRobbed = false;
+      return "Lawan terlalu miskin";
+    }
+    if (this.randomizer() > this.stealChance) {
+    	this.hasBeenRobbed = false;
       return "Gagal mencuri, coba lain kali";
     }
   }
