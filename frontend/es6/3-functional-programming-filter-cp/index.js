@@ -16,6 +16,7 @@
 
 const findAnimal = (bush) => {
   // TODO: answer here
+  return bush.split("").filter(String => String.toLowerCase() === String).join("");
 };
 
 module.exports = findAnimal
