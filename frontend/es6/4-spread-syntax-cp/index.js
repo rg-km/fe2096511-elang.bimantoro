@@ -1,6 +1,10 @@
 /**
+<<<<<<< HEAD
  * Buatlah sebuah fungsi yang menerima berapapun jumlah argumen dalam bentuk angka, 
  * kemudian mengembalikan nilai maksimal dari semua angka tersebut.
+=======
+ * Buatlah sebuah fungsi yang menerima berapapun jumlah argumen dalam bentuk angka, kemudian mengembalikan nilai maksimal dari semua angka tersebut.
+>>>>>>> 466979049e6a25d12227dd7a51f55bb2aefac437
  *
  * max(1, 2, 3, 4, 12, 3, 4) output: 12
  * max(1, 2, 5) output: 5
