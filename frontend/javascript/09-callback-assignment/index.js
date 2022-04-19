@@ -49,11 +49,24 @@ const input = [
 
 const isOdd = (data) => {
   // TODO: answer here
+  for (let i in data) {
+    if (data[i] % 2 === 0) {
+      return false;
+    } else if (data[i] % 2 === 1) {
+      return true;
+    }
+  }
 };
 
 const groupBy = (array, callback) => array.reduce(
   (accumulator, dataValue) => {
     // TODO: answer here
+    const key = callback(dataValue);
+    if (accumulator[key] === undefined) {
+      accumulator[key] = [];
+    }
+    accumulator[key].push(dataValue);
+    return accumulator;
   }, {}
 );
 
