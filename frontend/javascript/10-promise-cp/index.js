@@ -31,10 +31,15 @@ function requestStarWarsPeopleById(peopleId, onReturn, onError) {
     });
 }
 
+//untuk menjalankan
+requestStarWarsPeopleById(1, console.log, console.log);
+
 function promiseStarWarsPeopleById(peopleId) {
   // TODO: answer here
+  return new Promise((resolve, reject) => {
+    requestStarWarsPeopleById(peopleId, resolve, reject);
+  })
 }
-
 module.exports = {
   promiseStarWarsPeopleById,
   requestStarWarsPeopleById,
