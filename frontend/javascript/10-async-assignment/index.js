@@ -49,6 +49,20 @@ function getStarWarsData(url) {
 
 async function getStarshipModelByCharacterId(id) {
   // TODO: answer here
+  const character = await getStarWarsData('https://swapi.dev/api/people/' + id)
+  const charObj = JSON.parse(character)
+  const { starships } = charObj
+
+  const usedStarships = []
+  
+  for (endpoint of starships) {
+    const starship = await getStarWarsData(endpoint)
+    const starshipObj = JSON.parse(starship)
+    usedStarships.push(starshipObj.model)
+  }
+
+  console.log(usedStarships)
+  return usedStarships
 }
 
 
