@@ -17,14 +17,24 @@ function mostWordsFound(sentences) {
     let max = 0;
     for (let i = 0; i < sentences.length; i++) {
         let count = countWords(sentences[i]);
+        if (count > max) {
+            max = count;
+        }
         // TODO: answer here
     }
     return max
 }
 
 function countWords(sentence) {
-    return 0; // TODO: replace this
+    let words = sentence.split(" ");
+    let result = 0;
+    for (let i=0; i<words.length; i++) {
+        result++;
+    }
+    return result; // TODO: replace this
 }
+
+console.log(mostWordsFound(["Andi suka bermain bola", "Saya sedang belajar struktur data", "Terima kasih"]));
 
 module.exports = {
     mostWordsFound, countWords
