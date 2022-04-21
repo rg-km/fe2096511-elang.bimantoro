@@ -32,21 +32,17 @@ class Scores {
                 value: value
             })
         }
-        students.sort(function (a, b) {
+        students.sort((a, b) => {
             if (a.value > b.value) {
-                return -1;
-            } else if (a.value < b.value) {
-                return 1;
+              return b.value - a.value;
             } else if (a.value === b.value) {
-                if (a.correct > b.correct) {
-                    return -1;
-                } else if (a.correct < b.correct) {
-                    return 1;
-                } else if (a.correct === b.correct) {
-                    if(a.name < b.name){
-                        return -1;
-                    }
+              if (a.correct > b.correct) {
+                return b.correct - a.correct;
+              } else if (a.correct === b.correct) {
+                if (a.name < b.name) {
+                  return b.name - a.name;
                 }
+              }
             }
         });
         for (let i = 0; i < students.length; i++) {
