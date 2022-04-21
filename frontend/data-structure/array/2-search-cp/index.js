@@ -7,7 +7,8 @@ function searchMatch(arr1, arr2) {
             }
         }
     }
-    return result // TODO: replace this
+    return result 
+    // TODO: replace this
 }
 
 let cars1 = ["Toyota", "Honda", "Nissan", "BMW", "Chevy", "Ford"];
