@@ -63,6 +63,49 @@ function promiseStarWarsData(url) {
 
 function getDataPeopleByIdWithFilms(peopleId) {
   // TODO: answer here
+  const peopleUrl = `https://swapi.dev/api/people/${peopleId}`;
+  const result =  promiseStarWarsData(peopleUrl).then ((data) => {
+    const film = [];
+        for (let i = 0; i < data.films.length; i++) {
+            const filmUrl = data.films[i];
+            film.push(promiseStarWarsData(filmUrl));
+        }
+
+        return Promise.all(film).then((filmData) => {
+          const objFilm = [];
+          for (let i = 0; i < filmData.length; i++) {
+              objFilm.push({
+                  title: filmData[i].title,
+                  episode_id: filmData[i].episode_id,
+              });
+          }
+  
+          data.films = objFilm;
+
+          formatBaru = {
+              name: data.name,
+              height: data.height,
+              mass: data.mass,
+              hair_color: data.hair_color,
+              skin_color: data.skin_color,
+              eye_color: data.eye_color,
+              birth_year: data.birth_year,
+              gender: data.gender,
+              films: data.films
+          };
+
+          return formatBaru;
+        });
+  });
+  return result;
 }
+
+getDataPeopleByIdWithFilms(1)
+.then((data) => {
+  console.log(data);
+})
+.catch((err) => {
+  console.log(err);
+});
 
 module.exports = { getDataPeopleByIdWithFilms };
