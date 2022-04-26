@@ -13,7 +13,6 @@ module.exports = class MusicPlayer {
 
     play() {
         // TODO: answer here
-
         if(this.playlist.songs.length == 0) {
             return "";
         }
@@ -27,5 +26,5 @@ module.exports = class MusicPlayer {
             this.playlist.songs.shift();
             return "Now Playing " + song.singer + " - " + song.title;
         }
-    } 
+    }
 }
