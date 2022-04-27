@@ -13,9 +13,9 @@ module.exports = class MusicPlayer {
 
     play() {
         // TODO: answer here
-        if(this.playlist.songs.length == 0) {
-            return "";
-        }
+        let result = ''
+        for (let i = 0; i == this.playlist.songs.length; i++) {
+            return result}
         for (let song of this.playlist.songs) {
             let result = "Now Playing " + song.singer + " - " + song.title;
             if(this.playlist.isRepeatable) {
