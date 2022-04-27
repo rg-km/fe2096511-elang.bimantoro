@@ -3,13 +3,25 @@
 module.exports = class Stack {
     constructor() {
         // TODO: answer here
+        this.data = [];
+        this.top = -1;
+        this.size = 10;
     }
 
     push(elemen) {
         // TODO: answer here
+        this.top += 1;
+        return this.data.push(elemen);
     }
 
     pop() {
         // TODO: answer here
+        if(this.data.length <= 0) {
+            throw 'stack underflow';
+        }
+        else {
+            this.top -= 1;
+            return this.data.pop();
+        }
     }
 }
