@@ -20,8 +20,19 @@ function myPow(x, n) {
     let pow = Math.abs(n);
     
     // TODO: answer here
+    let result = 1;
+    for (let i = 0; i < pow; i++) {
+        result *= x;
+    }
     
     // TODO: answer here
+    if (n < 0) {
+        return 1 / result;
+    }
+    return result;
+
 }
+console.log(myPow(2.0, 10));
+console.log(myPow(2.1, 3));
 
 module.exports = { myPow }
