@@ -6,8 +6,11 @@ export default function App() {
 
 export function RandomQuote() {
   // TODO: answer here
+  const [quote, setQuote] = React.useState("");
+  const [loading , setLoading] = React.useState(true);
   React.useEffect(() => {
     // TODO: answer here
+    (getQuote())
   }, []);
 
   function getQuote() {
@@ -19,4 +22,20 @@ export function RandomQuote() {
   }
 
   // TODO: answer here
+  return (
+    <div>
+      <div className="brand">
+        <text>Random Quote</text>
+      </div>
+      <div className="button-container">
+        <button onClick={getQuote}>Get another quote</button>
+      </div>
+      <div className="quote-box">
+        <div className="quote" data-testid="quote">
+	  <p>{loading ? "Loading..." : quote.content}</p>
+	  <p>{loading ? "":author}</p>
+        </div>
+      </div>
+    </div>
+  );
 }
