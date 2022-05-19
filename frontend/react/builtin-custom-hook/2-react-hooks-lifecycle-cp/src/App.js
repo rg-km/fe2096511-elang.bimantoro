@@ -34,7 +34,7 @@ export function RandomQuote() {
       <div className="quote-box">
         <div className="quote" data-testid="quote">
 	  <p>{loading ? "Loading..." : quote.content}</p>
-	  <p>{loading ? "Loading..." : quote.author}</p>
+	  <p>{loading ? "" : quote.author}</p>
         </div>
       </div>
     </div>
