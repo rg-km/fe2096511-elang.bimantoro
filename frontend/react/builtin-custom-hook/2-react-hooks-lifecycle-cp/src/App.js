@@ -1,4 +1,5 @@
 import React from "react";
+import './App.css';
 
 export default function App() {
   return <RandomQuote />;
@@ -24,7 +25,7 @@ export function RandomQuote() {
   // TODO: answer here
   return (
     <div>
-      <div className="brand">
+      <div>
         <text>Random Quote</text>
       </div>
       <div className="button-container">
@@ -33,7 +34,7 @@ export function RandomQuote() {
       <div className="quote-box">
         <div className="quote" data-testid="quote">
 	  <p>{loading ? "Loading..." : quote.content}</p>
-	  <p>{loading ? "":author}</p>
+	  <p>{loading ? "Loading..." : quote.author}</p>
         </div>
       </div>
     </div>
