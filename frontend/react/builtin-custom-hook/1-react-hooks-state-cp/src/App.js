@@ -20,7 +20,7 @@ function RandomEmoji() {
   return (
     <div className="wrapper">
       <h1 className='emoji' data-testid="emoji">{emoji}</h1>
-      <button 
+      <button
         onClick={() => setEmoji(randomEmoji())}
         className="button"
         >Acak emoji</button>
