@@ -16,6 +16,12 @@ const App = () =>{
         if(language === "indonesian"){
             setText(indonesianText);
         }
+        else if(language === "english"){
+            setText(englishText);
+        }
+        else if(language === "spanish"){
+            setText(spanishText);
+        }
     }, [language])
 
     return(
