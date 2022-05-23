@@ -1,4 +1,8 @@
 // TODO: answer here
+import "./App.css";
+import React from "react";
+import "./index.css";
+
 export default function PostCard({ image, caption, username, userId, date }) {
   // TODO: answer here
   <nav aria-label="Post Card" className="Post" ref="post">
