@@ -7,6 +7,14 @@ function ageDistribution(persons) {
 function groupByAge(persons) {
     let result = new Map();
     // TODO: answer here
+    for (let i = 0; i < persons.length; i++) {
+        let age = persons[i].age;
+        if (result.has(age)) {
+            result.get(age).push(persons[i]);
+        } else {
+            result.set(age, [persons[i]]);
+        }
+    }
     return result
 }
 
