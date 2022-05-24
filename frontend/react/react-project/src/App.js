@@ -1,7 +1,6 @@
 import "./App.css"
 import React from "react";
 // TODO: answer here
-import React from "react";
 import Navbar from "./components/Navbar";
 import LikeDislikeButton from "./components/LikeDislikeButton";
 
@@ -20,4 +19,3 @@ function App() {
 }
 
 export default App
-

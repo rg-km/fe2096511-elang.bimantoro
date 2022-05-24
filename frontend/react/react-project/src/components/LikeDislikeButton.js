@@ -1,12 +1,6 @@
 // TODO: answer here
 import React, { useState, useEffect } from "react";
-export default function LikeDislikeButton({
-  id,
-  isLiked,
-  isDisliked,
-  likeCount,
-  dislikeCount,
-}) {
+export default function LikeDislikeButton({id, isLiked, isDisliked, likeCount, dislikeCount}) {
 
     // TODO: answer here
   const [like, setLike] = useState(likeCount);
