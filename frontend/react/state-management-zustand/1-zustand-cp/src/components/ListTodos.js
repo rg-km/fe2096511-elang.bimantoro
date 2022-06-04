@@ -5,6 +5,9 @@ import TodoItem from "./TodoItem";
 
 export default function ListTodos() {
     // TODO: answer here
+    const todos = useTodoStore((state) => state.todos)
+    const doneTodos = useTodoStore((state) => state.todos.filter((t) => t.isDone))
+    const undoneTodos = useTodoStore((state) => state.todos.filter((t) => !t.isDone))
 
     return (
       <Box width="xl" padding='1rem'>
